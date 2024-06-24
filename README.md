@@ -37,7 +37,7 @@ The Smart AI Bicycle Mobile App is designed to enhance the biking experience by 
 ```
 app/
 ├── java/
-│   └── com.example.smartbicycle/
+│   └── com.smartbicycle.smartbicycle/
 │       ├── activities/
 │       │   ├── LoginActivity.java
 │       │   ├── MainActivity.java
