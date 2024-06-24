@@ -65,8 +65,8 @@ app/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/smart-ai-bicycle-app.git
-   cd smart-ai-bicycle-app
+   git clone https://github.com/samwelnyandoro/SmartBicycle.git
+   cd SmartBicycle
    ```
 
 2. **Open the Project in Android Studio**
