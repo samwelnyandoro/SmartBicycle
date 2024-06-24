@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572998104448",
+    "project_id": "smart-bicycle-a03ad",
+    "storage_bucket": "smart-bicycle-a03ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572998104448:android:8fb76f0635c1a436f27d65",
+        "android_client_info": {
+          "package_name": "com.smartbicycle.smartbicycle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC-vmvWjNhgRQx7WmIYYoDtxoCSh-02Ak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
