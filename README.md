@@ -39,6 +39,7 @@ app/
 ├── java/
 │   └── com.smartbicycle.smartbicycle/
 │       ├── activities/
+│       │   ├── SplashActivity.java
 │       │   ├── LoginActivity.java
 │       │   ├── MainActivity.java
 │       ├── fragments/
