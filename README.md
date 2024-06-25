@@ -100,15 +100,15 @@ app/
 ## Dependencies
 ```gradle
 // Firebase
-implementation 'com.google.firebase:firebase-auth:21.0.1'
-implementation 'com.google.firebase:firebase-database:20.0.3'
+implementation 'com.google.firebase:firebase-auth:23.0.0'
+implementation 'com.google.firebase:firebase-database:21.0.0'
 
 // Google Maps
-implementation 'com.google.android.gms:play-services-maps:18.0.2'
-implementation 'com.google.android.gms:play-services-location:21.0.1'
+implementation 'com.google.android.gms:play-services-maps:18.2.0'
+implementation 'com.google.android.gms:play-services-location:21.3.0'
 
 // Google Fit
-implementation 'com.google.android.gms:play-services-fitness:21.0.1'
+implementation 'com.google.android.gms:play-services-fitness:21.2.0'
 ```
 
 ## Contributing
