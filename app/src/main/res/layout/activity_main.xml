@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#F8F8F8"
+    android:background="#D3D3D3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
@@ -80,7 +80,7 @@
     <ImageView
         android:id="@+id/bicycle_image"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_centerInParent="true"
         android:scaleType="fitCenter"
         android:src="@drawable/bicycle" />
