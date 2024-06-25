@@ -1,316 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:background="#D3D3D3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F8F8F8">
 
-    <!-- User Profile and Weather Information -->
-    <LinearLayout
-        android:id="@+id/profile_weather_layout"
+    <!-- Scrollable content -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:weightSum="2">
-
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_profile"
-            android:layout_marginEnd="8dp"
-            android:scaleType="centerCrop" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/profile_name"
-                android:layout_width="wrap_content"
+            <!-- User Profile and Weather Information -->
+            <LinearLayout
+                android:id="@+id/profile_weather_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jack Switche"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/profile_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="North Carolina"
-                android:textSize="14sp" />
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_profile"
+                    android:layout_marginEnd="8dp"
+                    android:scaleType="centerCrop" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="end">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/weather_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="29° | 13km/h"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:gravity="end" />
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jack Switche"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/weather_status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mostly Sunny"
-                android:textSize="14sp"
-                android:gravity="end" />
-        </LinearLayout>
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/profile_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="North Carolina"
+                        android:textSize="14sp" />
+                </LinearLayout>
 
-    <!-- Bicycle Image -->
-    <ImageView
-        android:id="@+id/bicycle_image"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_centerInParent="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/bicycle" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="end">
 
-    <!-- AI Command Input -->
-    <LinearLayout
-        android:id="@+id/ai_command_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bicycle_image"
-        android:layout_margin="16dp"
-        android:orientation="horizontal"
-        android:background="@drawable/ai_command_background"
-        android:padding="8dp"
-        android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/weather_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="29° | 13km/h"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="end" />
 
-        <EditText
-            android:id="@+id/ai_command_input"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Command with AI..."
-            android:padding="8dp"
-            android:background="@null"
-            android:textColor="#000"
-            android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/weather_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mostly Sunny"
+                        android:textSize="14sp"
+                        android:gravity="end" />
+                </LinearLayout>
+            </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/ai_command_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_microphone"
-            android:background="@drawable/button_background"
-            android:padding="8dp" />
-    </LinearLayout>
-
-    <!-- Controls -->
-    <GridLayout
-        android:id="@+id/controls_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ai_command_layout"
-        android:layout_margin="16dp"
-        android:columnCount="2"
-        android:rowCount="2"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="false">
-
-        <!-- Speed Control -->
-        <LinearLayout
-            android:id="@+id/speed_control"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/control_background"
-            android:padding="16dp"
-            android:layout_row="0"
-            android:layout_column="0">
-
+            <!-- Bicycle Image -->
             <ImageView
-                android:id="@+id/speed_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_speed" />
+                android:id="@+id/bicycle_image"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bicycle" />
 
-            <TextView
-                android:id="@+id/speed_text"
-                android:layout_width="wrap_content"
+            <!-- AI Command Input -->
+            <LinearLayout
+                android:id="@+id/ai_command_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Speed"
-                android:textSize="14sp"
-                android:textColor="#000" />
+                android:layout_margin="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/ai_command_background"
+                android:padding="8dp"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/speed_value"
-                android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/ai_command_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Command with AI..."
+                    android:padding="8dp"
+                    android:background="@null"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/ai_command_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_microphone"
+                    android:background="@drawable/button_background"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <!-- Controls -->
+            <GridLayout
+                android:id="@+id/controls_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="85km/h"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#FFEB3B" />
+                android:layout_margin="16dp"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false">
+
+                <!-- Speed Control -->
+                <LinearLayout
+                    android:id="@+id/speed_control"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/control_background"
+                    android:padding="16dp"
+                    android:layout_row="0"
+                    android:layout_column="0">
+
+                    <ImageView
+                        android:id="@+id/speed_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_speed" />
+
+                    <TextView
+                        android:id="@+id/speed_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Speed"
+                        android:textSize="14sp"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/speed_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="85km/h"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFEB3B" />
+                </LinearLayout>
+
+                <!-- Lock Control -->
+                <LinearLayout
+                    android:id="@+id/lock_control"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/control_background"
+                    android:padding="16dp"
+                    android:layout_row="0"
+                    android:layout_column="1">
+
+                    <ImageView
+                        android:id="@+id/lock_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_lock" />
+
+                    <TextView
+                        android:id="@+id/lock_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lock"
+                        android:textSize="14sp"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/lock_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unlocked"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000" />
+                </LinearLayout>
+
+                <!-- Battery Control -->
+                <LinearLayout
+                    android:id="@+id/battery_control"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/control_background"
+                    android:padding="16dp"
+                    android:layout_row="1"
+                    android:layout_column="0">
+
+                    <ImageView
+                        android:id="@+id/battery_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_battery" />
+
+                    <TextView
+                        android:id="@+id/battery_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Battery"
+                        android:textSize="14sp"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/battery_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Optimized"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000" />
+                </LinearLayout>
+
+                <!-- Other Features Control -->
+                <LinearLayout
+                    android:id="@+id/other_features_control"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/control_background"
+                    android:padding="16dp"
+                    android:layout_row="1"
+                    android:layout_column="1">
+
+                    <ImageView
+                        android:id="@+id/other_features_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_features" />
+
+                    <TextView
+                        android:id="@+id/other_features_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Others"
+                        android:textSize="14sp"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/other_features_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Good"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#000" />
+                </LinearLayout>
+            </GridLayout>
         </LinearLayout>
-
-        <!-- Lock Control -->
-        <LinearLayout
-            android:id="@+id/lock_control"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/control_background"
-            android:padding="16dp"
-            android:layout_row="0"
-            android:layout_column="1">
-
-            <ImageView
-                android:id="@+id/lock_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_lock" />
-
-            <TextView
-                android:id="@+id/lock_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lock"
-                android:textSize="14sp"
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/lock_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Unlocked"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#000" />
-        </LinearLayout>
-
-        <!-- Battery Control -->
-        <LinearLayout
-            android:id="@+id/battery_control"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/control_background"
-            android:padding="16dp"
-            android:layout_row="1"
-            android:layout_column="0">
-
-            <ImageView
-                android:id="@+id/battery_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_battery" />
-
-            <TextView
-                android:id="@+id/battery_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Battery"
-                android:textSize="14sp"
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/battery_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Optimized"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#000" />
-        </LinearLayout>
-
-        <!-- Other Features Control -->
-        <LinearLayout
-            android:id="@+id/other_features_control"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/control_background"
-            android:padding="16dp"
-            android:layout_row="1"
-            android:layout_column="1">
-
-            <ImageView
-                android:id="@+id/other_features_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_features" />
-
-            <TextView
-                android:id="@+id/other_features_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Others"
-                android:textSize="14sp"
-                android:textColor="#000" />
-
-            <TextView
-                android:id="@+id/other_features_value"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+6 features"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#000" />
-        </LinearLayout>
-    </GridLayout>
+    </ScrollView>
 
     <!-- Bottom Navigation -->
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#FFFFFF"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/nav_home"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_home"
-            android:background="@null"
-            android:contentDescription="Home" />
-
-        <ImageButton
-            android:id="@+id/nav_bike"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_bike"
-            android:background="@null"
-            android:contentDescription="Bike" />
-
-        <ImageButton
-            android:id="@+id/nav_settings"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_settings"
-            android:background="@null"
-            android:contentDescription="Settings" />
-    </LinearLayout>
+        android:background="@color/white"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>
